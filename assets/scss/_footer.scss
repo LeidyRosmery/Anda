@@ -1,0 +1,49 @@
+footer.padBoth {
+    padding: 0 3.5vw;
+}
+.pie-pag {
+    color: $accent-color;
+    background: $brand-color;
+    padding: 2em 0;
+
+    &--bntUp {
+        background: $base-color;
+        color: $accent-color;
+        display: flex;
+        flex-direction: column;
+        width: 5.5em;
+        padding: 1.5em;
+        border-radius: 65%;
+        position: relative;
+        left: 22em;
+        bottom: 8em;
+    }
+
+    &--bntUp:hover {
+        color: $brand-color;
+        text-decoration-line: none;
+    }
+
+    &--icon {
+        color: $accent-color;
+        padding: 0 0.5em;
+    }
+
+    &--item {
+        padding: 1em 4em;
+
+        &__bf {
+            border-right: solid 0.12em #fff;
+            border-left: solid 0.12em #fff;
+        }
+    }
+
+    &--text {
+        margin: 0;
+        font-size: 1em;
+
+        &__pd {
+            padding-top: 1em;
+        }
+    }
+}
