@@ -11,7 +11,7 @@
   z-index: 20;
   background: #fff; }
 
-.item-product, .item-brand, .title-product,
+.item-product, .item-brand, .title-product, .item-fix,
 .link-main {
   font-size: 0.8em;
   line-height: 31px;
@@ -35,12 +35,12 @@
   z-index: 30;
   background: #fff; }
 
-.badgs {
+.badgs, .badgs-fix {
   position: relative;
   left: 49em;
   padding: 1em; }
 
-.item-product, .item-brand, .title-product {
+.item-product, .item-brand, .title-product, .item-fix {
   position: relative;
   text-decoration: none;
   display: inline-block;
@@ -99,7 +99,7 @@
 .nav-product {
   display: inline-block; }
 
-.main-header {
+.main-header, .main-fix {
   display: flex;
   top: 7em;
   justify-content: center;
@@ -144,7 +144,8 @@
 /***********grilla productos**********/
 .grid-product {
   position: relative;
-  top: 24.2em; }
+  top: 24.2em;
+  transition: all 1s; }
 
 .trigger-modal {
   cursor: pointer; }
@@ -178,7 +179,8 @@
   background: red;
   border-radius: 7em; }
 
-.measure-available, .flavor-available {
+.flavor-available,
+.measure-available {
   display: flex;
   padding: 1em 0;
   justify-content: space-around;
@@ -210,5 +212,70 @@
 
 .quantity {
   color: #969696; }
+
+/******register***********/
+.main-fix {
+  flex-direction: row;
+  top: 3em;
+  background: #fff;
+  align-items: center;
+  padding: 0.5em 3em;
+  border-bottom: dashed 0.3em;
+  justify-content: space-around; }
+
+.item-fix {
+  padding: 0 0.2em; }
+
+.badgs-fix {
+  left: 0; }
+
+.logo-fix,
+.title-fix {
+  font-size: 2.3em;
+  position: relative; }
+
+.logo-fix {
+  left: -3.5em;
+  top: -0.2em; }
+
+.dashboard {
+  background: #F3F3F3;
+  top: 7.5em;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
+
+.register {
+  background: #fff;
+  width: 36.5em;
+  padding: 1em;
+  margin: 0 auto; }
+
+.input-register {
+  -webkit-box-sizing: content-box;
+  box-shadow: none;
+  box-sizing: content-box;
+  display: block;
+  height: 40px;
+  padding: 4px 19px;
+  margin: 12px 4px;
+  width: 88%;
+  width: calc(100% - 38px);
+  border: none;
+  background: #F6F6F6; }
+
+.input-register::placeholder {
+  color: #333;
+  font-size: 14px;
+  line-height: 12px;
+  font-weight: 500; }
+
+.term-leg {
+  line-height: 1.5;
+  font-weight: 500;
+  color: #333;
+  padding-top: 15px;
+  font-size: 10px; }
 
 /*# sourceMappingURL=style.css.map */
