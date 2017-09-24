@@ -41,7 +41,7 @@ $basic-color: #fff;
     position: fixed;
     top: 3em;
     height: 10.9vh;
-    z-index: 30;
+    z-index: 10;
     background: $basic-color;
 }
 
@@ -95,6 +95,7 @@ $basic-color: #fff;
 }
 
 .input-detail:focus,
+.input-register:focus,
 .input-search:focus {
     outline: 0;
 }
@@ -109,6 +110,10 @@ $basic-color: #fff;
 
 .pad-x2 {
     padding: 0 1em;
+}
+
+.mrg-0 {
+    margin: 0;
 }
 
 .pad-x3 {
@@ -128,7 +133,7 @@ $basic-color: #fff;
     top: 7em;
     justify-content: center;
     position: fixed;
-    z-index: 50;
+    z-index: 13;
     flex-direction: column;
     transition: all 1s;
 }
@@ -140,7 +145,7 @@ $basic-color: #fff;
     flex-direction: column;
     position: fixed;
     top: 18em;
-    z-index: 25;
+    z-index: 12;
     padding: 0;
 }
 
@@ -171,7 +176,7 @@ $basic-color: #fff;
     height: 1vh;
     transition: all 1s;
     //  position: fixed;
-    z-index: 50;
+    z-index: 15;
     transform: translate(0px,-48px);
 }
 /***********grilla productos**********/
@@ -271,7 +276,6 @@ $basic-color: #fff;
     background: $basic-color;
     align-items: center;
     padding: 0.5em 3em;
-    border-bottom: dashed 0.3em;
     justify-content: space-around;
 }
 
@@ -298,11 +302,17 @@ $basic-color: #fff;
 
 .dashboard {
     background: #F3F3F3;
-    top: 7.5em;
+    top: 8.5em;
     position: relative;
     display: flex;
+    border-bottom: dashed 0.3em;
+    border-top: dashed 0.3em;
     flex-direction: column;
     justify-content: center;
+}
+
+.detail-register {
+    padding: 2em 0;
 }
 
 .register {
@@ -311,30 +321,65 @@ $basic-color: #fff;
     padding: 1em;
     margin: 0 auto;
 }
-.input-register{
-  -webkit-box-sizing: content-box;
-  box-shadow: none;
-  box-sizing: content-box;
 
-  display: block;
-  height: 40px;
-  padding: 4px 19px;
-  margin: 12px 4px;
-  width: 88%;
-  width: calc(100% - 38px);
-  border: none;
-  background: #F6F6F6;
+.input-register {
+    -webkit-box-sizing: content-box;
+    box-shadow: none;
+    box-sizing: content-box;
+    display: block;
+    height: 40px;
+    padding: 4px 19px;
+    margin: 12px 4px;
+    width: 88%;
+    width: calc(100% - 38px);
+    border: none;
+    background: #F6F6F6;
 }
-.input-register::placeholder{
+
+.input-register::placeholder {
     color: #333;
     font-size: 14px;
     line-height: 12px;
     font-weight: 500;
 }
-.term-leg{
-  line-height: 1.5;
-  font-weight: 500;
-  color: #333;
-  padding-top: 15px;
-  font-size: 10px;
+
+.indications {
+    @extend .item-product;
+    width: 100%;
+    margin: 0.5em 0 0;
+    padding: 0 1.5em;
+}
+
+.term-leg {
+    line-height: 1.5;
+    font-weight: 500;
+    color: #333;
+    padding-top: 15px;
+    font-size: 10px;
+}
+
+.btn-fb {
+    @extend .input-register;
+    background: #3C55A2;
+}
+
+.btn-g {
+    @extend .input-register;
+    background: $basic-color;
+    border: solid 2px #F2F2F2;
+}
+
+.pd-0 {
+    padding: 0;
+}
+
+/*****************login***************/
+.tooltip-login{
+  z-index: 60;
+  position: absolute;
+  height: 89vh;
+  width: 31vw;
+  top: 3em;
+  right: 8em;
+  background: red;
 }

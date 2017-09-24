@@ -11,7 +11,7 @@
   z-index: 20;
   background: #fff; }
 
-.item-product, .item-brand, .title-product, .item-fix,
+.item-product, .item-brand, .title-product, .item-fix, .indications,
 .link-main {
   font-size: 0.8em;
   line-height: 31px;
@@ -32,7 +32,7 @@
   position: fixed;
   top: 3em;
   height: 10.9vh;
-  z-index: 30;
+  z-index: 10;
   background: #fff; }
 
 .badgs, .badgs-fix {
@@ -40,7 +40,7 @@
   left: 49em;
   padding: 1em; }
 
-.item-product, .item-brand, .title-product, .item-fix {
+.item-product, .item-brand, .title-product, .item-fix, .indications {
   position: relative;
   text-decoration: none;
   display: inline-block;
@@ -78,6 +78,9 @@
   text-align: center; }
 
 .input-detail:focus, .input-favorite:focus,
+.input-register:focus,
+.btn-fb:focus,
+.btn-g:focus,
 .input-search:focus {
   outline: 0; }
 
@@ -89,6 +92,9 @@
 
 .pad-x2 {
   padding: 0 1em; }
+
+.mrg-0 {
+  margin: 0; }
 
 .pad-x3 {
   padding: 1.5em 0; }
@@ -104,7 +110,7 @@
   top: 7em;
   justify-content: center;
   position: fixed;
-  z-index: 50;
+  z-index: 13;
   flex-direction: column;
   transition: all 1s; }
 
@@ -115,7 +121,7 @@
   flex-direction: column;
   position: fixed;
   top: 18em;
-  z-index: 25;
+  z-index: 12;
   padding: 0; }
 
 .brand {
@@ -138,7 +144,7 @@
   width: 73%;
   height: 1vh;
   transition: all 1s;
-  z-index: 50;
+  z-index: 15;
   transform: translate(0px, -48px); }
 
 /***********grilla productos**********/
@@ -220,7 +226,6 @@
   background: #fff;
   align-items: center;
   padding: 0.5em 3em;
-  border-bottom: dashed 0.3em;
   justify-content: space-around; }
 
 .item-fix {
@@ -240,11 +245,16 @@
 
 .dashboard {
   background: #F3F3F3;
-  top: 7.5em;
+  top: 8.5em;
   position: relative;
   display: flex;
+  border-bottom: dashed 0.3em;
+  border-top: dashed 0.3em;
   flex-direction: column;
   justify-content: center; }
+
+.detail-register {
+  padding: 2em 0; }
 
 .register {
   background: #fff;
@@ -252,7 +262,7 @@
   padding: 1em;
   margin: 0 auto; }
 
-.input-register {
+.input-register, .btn-fb, .btn-g {
   -webkit-box-sizing: content-box;
   box-shadow: none;
   box-sizing: content-box;
@@ -265,11 +275,16 @@
   border: none;
   background: #F6F6F6; }
 
-.input-register::placeholder {
+.input-register::placeholder, .btn-fb::placeholder, .btn-g::placeholder {
   color: #333;
   font-size: 14px;
   line-height: 12px;
   font-weight: 500; }
+
+.indications {
+  width: 100%;
+  margin: 0.5em 0 0;
+  padding: 0 1.5em; }
 
 .term-leg {
   line-height: 1.5;
@@ -277,5 +292,25 @@
   color: #333;
   padding-top: 15px;
   font-size: 10px; }
+
+.btn-fb {
+  background: #3C55A2; }
+
+.btn-g {
+  background: #fff;
+  border: solid 2px #F2F2F2; }
+
+.pd-0 {
+  padding: 0; }
+
+/*****************login***************/
+.tooltip-login {
+  z-index: 60;
+  position: absolute;
+  height: 89vh;
+  width: 31vw;
+  top: 3em;
+  right: 8em;
+  background: red; }
 
 /*# sourceMappingURL=style.css.map */
