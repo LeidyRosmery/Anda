@@ -1,3 +1,6 @@
+$brand-color: #333333;
+$basic-color: #fff;
+
 * {
     margin: 0;
     padding: 0;
@@ -7,12 +10,14 @@
 
 .nav-main {
     border-bottom: 1px #F4F4F4 solid;
+    padding: 0 7em;
 }
 
+.item-product,
 .link-main {
-    font-size: 10px;
+    font-size: 0.8em;
     line-height: 31px;
-    color: #333333 !important;
+    color: $brand-color !important;
     text-decoration: underline;
     font-weight: 600;
     display: inline-block;
@@ -23,18 +28,72 @@
 }
 
 .title-main {
-    font-size: 55px;
-}
-
-.cont-badges {
-    position: relative;
+    font-size: 3em;
+;
 }
 
 .badgs {
     position: relative;
-    left: 45em;
-    padding: 1em 1em;
+    left: 49em;
+    padding: 1em;
 }
 
+.hidden {
+    opacity: 0;
+}
 
-/*# sourceMappingURL=style.css.map */
+.item-product {
+    position: relative;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    padding: 0 1em;
+}
+
+.highlight:hover:before {
+    background-color: #fffe94;
+    content: "";
+    height: 5px;
+    left: 0;
+    bottom: 14px;
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+}
+
+.search {
+    background: #F3F3F3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 3.5em;
+}
+
+.pad-x2 {
+    padding: 0 1em;
+}
+
+.nav-product {
+    display: inline-block;
+   width: 41%;
+
+}
+
+.brand {
+    @extend .search;
+    background: $brand-color;
+    height: 2.7em;
+}
+
+.cont-brands {
+    margin: 0;
+}
+
+.item-brand {
+    @extend .item-product;
+    color: $basic-color !important;
+}
+
+.product {
+    width: 100%;
+}

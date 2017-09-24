@@ -1,51 +1,30 @@
-'use strict';
+const lastScrollTop = 0;
+window.addEventListener("scroll", function() {
+    const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+    if (currentScroll > lastScrollTop) {
 
-const render = (root) => {
-    root.empty();
-    root.append(Header(_ => render(root)));
-    switch (state.currentScreen) {
-        case 'principal':
-            root.append(Principal(_ => render(root)));
-            root.append(Secondary(_ => render(root)));
-            root.append(Mundo(_ => render(root)));
-            root.append(Tecnologia(_ => render(root)));
-            root.append(Educacion(_ => render(root)));
-            root.append(Opinion(_ => render(root)));
-            root.append(Carousel(_ => render(root)));
-            break;
+$('.title-main').css('transform', 'translate(8px, -133px)');
+$('.title-main').css('font-size', '2.3em');
+$('#icon-search').css('opacity','1');
+$('.hide').css('display','none');
+$('.nav-product').css('transform', 'translate(-390px, -188px)');
+$('.nav-product').css('font-size', '0.8em');
+//$('.logo').css('transform', 'translate(8px, -133px)');
 
-        case 'article':
-            root.append(DetailNews(_ => render(root)));
-            break;
+
+
+    } else {
+        if (currentScroll <= 3) {
+          $('.hide').css('display','inline');
+
+          //$('.logo').css('transform', 'translate(0px,0px)');
+          //$('.logo').css('font-size','5em');
+          $('#icon-search').css('opacity','0');
+          $('.nav-product').css('transform', 'translate(0px, 0px)');
+          $('.nav-product').css('font-size', '1em');
+      $('.title-main').css('font-size', '3em');
+            $('.title-main').css('transform', 'translate(0px,0px)');
+        }
     }
-    root.append(Footer(_ => render(root)));
-};
-
-const laboratoriaNews = {
-    news: null,
-    idNew: null,
-    category: null,
-    idCategory: null
-}
-
-
-const state = {
-    currentScreen: 'principal'
-}
-
-$(_ => {
-    getJSON('/api/news/', (err, json) => {
-        laboratoriaNews.news = json;
-        console.log(laboratoriaNews.news);
-        const root = $('.root');
-        render(root);
-
-        getJSON('/api/categories/', (err, json) => {
-            laboratoriaNews.category = json;
-            console.log(laboratoriaNews.category);
-        });
-    });
-
-
-
-});
+    lastScrollTop = currentScroll;
+}, false);
