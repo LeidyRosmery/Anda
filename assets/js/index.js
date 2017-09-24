@@ -1,3 +1,6 @@
+/********************modal*****************/
+
+/**********************scroll***********************/
 var lastScrollTop = 0;
 window.addEventListener("scroll", function() {
     var currentScroll = window.pageYOffset || document.documentElement.scrollTop;
@@ -6,12 +9,16 @@ window.addEventListener("scroll", function() {
         $('.title-main').css('padding-left', '3.5em');
         $('#icon-search').css('opacity', '1');
         $('.hide').css('display', 'none');
+        $('.main-brand').css('top', '7.5em');
+        $('.grid-product').css('top', '13.5em');
         $('.item-product').css('padding', '0em 0.2em');
         $('.main-header').addClass('translate');
         $('.logo').css('font-size', '2.2em');
 
     } else {
         if (currentScroll <= 3) {
+          $('.main-brand').css('top', '18em'); ;
+            $('.grid-product').css('top', '24.2em');
             $('.title-main').css('padding-left', '0em');
             $('.hide').css('display', 'inline-block');
             $('.item-product').css('padding', '0 1em');

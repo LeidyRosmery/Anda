@@ -11,6 +11,9 @@ $basic-color: #fff;
 .nav-main {
     border-bottom: 1px #F4F4F4 solid;
     padding: 0 7em;
+    position: fixed;
+    z-index: 20;
+    background: $basic-color;
 }
 
 .item-product,
@@ -31,6 +34,14 @@ $basic-color: #fff;
     font-size: 3em;
     display: inline-block;
     transition: all 1s;
+}
+
+.cont-badges {
+    position: fixed;
+    top: 3em;
+    height: 10.9vh;
+    z-index: 30;
+    background: $basic-color;
 }
 
 .badgs {
@@ -108,15 +119,23 @@ $basic-color: #fff;
 
 .main-header {
     display: flex;
+    top: 7em;
     justify-content: center;
+    position: fixed;
+    z-index: 50;
     flex-direction: column;
     transition: all 1s;
 }
 
 .main-brand {
     display: flex;
+    background: $basic-color;
     transition: all 1s;
     flex-direction: column;
+    position: fixed;
+    top: 18em;
+    z-index: 25;
+    padding: 0;
 }
 
 .brand {
@@ -145,11 +164,30 @@ $basic-color: #fff;
     width: 73%;
     height: 1vh;
     transition: all 1s;
+    //  position: fixed;
+    z-index: 50;
     transform: translate(0px,-48px);
 }
 /***********grilla productos**********/
+.grid-product {
+    position: relative;
+    top: 24.2em;
+}
+
+.trigger-modal {
+    cursor: pointer;
+}
+
 .bdr-top {
     border-top: 0.2em #F4F4F4 solid;
+}
+
+.modal-backdrop.show {
+    top: 24.6vh;
+}
+.modal.show .modal-dialog {
+    -webkit-transform: translate(0,25vh);
+    transform: translate(0,25vh);
 }
 
 .icon-product {
