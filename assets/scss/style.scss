@@ -29,7 +29,8 @@ $basic-color: #fff;
 
 .title-main {
     font-size: 3em;
-;
+    display: inline-block;
+    transition: all 1s;
 }
 
 .badgs {
@@ -38,16 +39,20 @@ $basic-color: #fff;
     padding: 1em;
 }
 
-.hidden {
-    opacity: 0;
-}
-
 .item-product {
     position: relative;
     text-decoration: none;
     display: inline-block;
     cursor: pointer;
     padding: 0 1em;
+}
+
+.close {
+    cursor: pointer;
+}
+
+.hidden {
+    display: none;
 }
 
 .highlight:hover:before {
@@ -67,16 +72,51 @@ $basic-color: #fff;
     justify-content: center;
     align-items: center;
     height: 3.5em;
+    transition: all 1.5s;
+}
+
+.input-search {
+    background: transparent;
+    border: none;
+    width: 72em;
+    text-align: center;
+}
+
+.input-search:focus {
+    outline: 0;
+}
+
+.input-search::placeholder {
+    padding: 0 28em;
+}
+
+#icon-search {
+    cursor: pointer;
 }
 
 .pad-x2 {
     padding: 0 1em;
 }
 
+.pad-x1 {
+    padding: 0 0.3em;
+}
+
 .nav-product {
     display: inline-block;
-   width: 41%;
+}
 
+.main-header {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    transition: all 1s;
+}
+
+.main-brand {
+    display: flex;
+    transition: all 1s;
+    flex-direction: column;
 }
 
 .brand {
@@ -96,4 +136,43 @@ $basic-color: #fff;
 
 .product {
     width: 100%;
+}
+
+.translate {
+    display: flex;
+    justify-content: center;
+    flex-direction: row-reverse;
+    width: 73%;
+    height: 1vh;
+    transition: all 1s;
+    transform: translate(0px,-48px);
+}
+/***********grilla productos**********/
+.bdr-top {
+    border-top: 0.2em #F4F4F4 solid;
+}
+
+.icon-product {
+    color: #A1A1A1;
+    font-size: 1.2em;
+    padding: 0.5em;
+}
+
+.title-product {
+    @extend .item-product;
+    color: #7B7B7B;
+    margin: 0;
+    line-height: 0;
+}
+
+.quantity,
+.stock {
+    font-size: 0.9em;
+    color: #333333;
+    margin: 0;
+    line-height: 0.7em;
+}
+
+.quantity {
+    color: #969696;
 }

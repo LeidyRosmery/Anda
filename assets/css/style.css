@@ -8,7 +8,7 @@
   border-bottom: 1px #F4F4F4 solid;
   padding: 0 7em; }
 
-.item-product, .item-brand,
+.item-product, .item-brand, .title-product,
 .link-main {
   font-size: 0.8em;
   line-height: 31px;
@@ -21,22 +21,27 @@
   text-decoration: none; }
 
 .title-main {
-  font-size: 3em; }
+  font-size: 3em;
+  display: inline-block;
+  transition: all 1s; }
 
 .badgs {
   position: relative;
   left: 49em;
   padding: 1em; }
 
-.hidden {
-  opacity: 0; }
-
-.item-product, .item-brand {
+.item-product, .item-brand, .title-product {
   position: relative;
   text-decoration: none;
   display: inline-block;
   cursor: pointer;
   padding: 0 1em; }
+
+.close {
+  cursor: pointer; }
+
+.hidden {
+  display: none; }
 
 .highlight:hover:before {
   background-color: #fffe94;
@@ -53,14 +58,43 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 3.5em; }
+  height: 3.5em;
+  transition: all 1.5s; }
+
+.input-search {
+  background: transparent;
+  border: none;
+  width: 72em;
+  text-align: center; }
+
+.input-search:focus {
+  outline: 0; }
+
+.input-search::placeholder {
+  padding: 0 28em; }
+
+#icon-search {
+  cursor: pointer; }
 
 .pad-x2 {
   padding: 0 1em; }
 
+.pad-x1 {
+  padding: 0 0.3em; }
+
 .nav-product {
-  display: inline-block;
-  width: 41%; }
+  display: inline-block; }
+
+.main-header {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  transition: all 1s; }
+
+.main-brand {
+  display: flex;
+  transition: all 1s;
+  flex-direction: column; }
 
 .brand {
   background: #333333;
@@ -74,5 +108,38 @@
 
 .product {
   width: 100%; }
+
+.translate {
+  display: flex;
+  justify-content: center;
+  flex-direction: row-reverse;
+  width: 73%;
+  height: 1vh;
+  transition: all 1s;
+  transform: translate(0px, -48px); }
+
+/***********grilla productos**********/
+.bdr-top {
+  border-top: 0.2em #F4F4F4 solid; }
+
+.icon-product {
+  color: #A1A1A1;
+  font-size: 1.2em;
+  padding: 0.5em; }
+
+.title-product {
+  color: #7B7B7B;
+  margin: 0;
+  line-height: 0; }
+
+.quantity,
+.stock {
+  font-size: 0.9em;
+  color: #333333;
+  margin: 0;
+  line-height: 0.7em; }
+
+.quantity {
+  color: #969696; }
 
 /*# sourceMappingURL=style.css.map */
