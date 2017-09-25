@@ -172,7 +172,10 @@ button.close {
   border-top: 0.3em #F4F4F4 dotted; }
 
 .modal-content {
-  padding: 1em 1.5em; }
+  padding: 0.5em 1.5em; }
+
+.modal-open .modal {
+  overflow-y: hidden; }
 
 .modal-dialog {
   max-width: 57.5vw; }
@@ -356,7 +359,7 @@ button.close {
   top: 9em; }
 
 .title-shopping {
-  margin: 0 auto 1em auto;
+  margin: 0 auto 1em;
   position: relative;
   display: inline-block;
   text-decoration: none;
@@ -369,6 +372,16 @@ h2:before {
   height: 5px;
   left: 0;
   bottom: 14px;
+  position: absolute;
+  width: 100%;
+  z-index: -1; }
+
+.item-checkout:before {
+  background-color: #fffe94;
+  content: "";
+  height: 5px;
+  left: 0;
+  bottom: 8px;
   position: absolute;
   width: 100%;
   z-index: -1; }
@@ -392,5 +405,17 @@ span.step:after {
 .text-shopping {
   width: 60%;
   font-size: 13px; }
+
+.mont-price {
+  border-bottom: 2px solid #666;
+  border-top: 2px solid #666; }
+
+.price {
+  display: flex;
+  justify-content: space-between;
+  padding: 1em 2em;
+  font-weight: bold;
+  font-size: 1.1em;
+  align-items: center; }
 
 /*# sourceMappingURL=style.css.map */
