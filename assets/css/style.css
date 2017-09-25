@@ -77,12 +77,14 @@
   width: 72em;
   text-align: center; }
 
-.input-detail:focus, .input-favorite:focus,
-button.close,
+.input-detail:focus,
 .input-register:focus,
+.input-favorite:focus,
+.input-checkout:focus,
 .btn-fb:focus,
 .btn-g:focus,
-.input-search:focus {
+.input-search:focus,
+button.close {
   outline: 0; }
 
 .input-search::placeholder {
@@ -99,6 +101,9 @@ button.close,
 
 .pad-x3 {
   padding: 1.5em 0; }
+
+.pad-x4 {
+  padding: 0.2em 0; }
 
 .pad-x1 {
   padding: 0 0.3em; }
@@ -160,6 +165,9 @@ button.close,
 .bdr-top {
   border-top: 0.2em #F4F4F4 solid; }
 
+.bdr-bottom {
+  border-bottom: 0.4em #F4F4F4 solid; }
+
 .bdr-dotted {
   border-top: 0.3em #F4F4F4 dotted; }
 
@@ -176,7 +184,7 @@ button.close,
   -webkit-transform: translate(0, 25vh);
   transform: translate(0, 25vh); }
 
-.input-detail, .input-favorite {
+.input-detail {
   background: #F3F3F3;
   width: 100%;
   border: none;
@@ -196,11 +204,7 @@ button.close,
   justify-content: space-around;
   align-items: center; }
 
-.input-favorite {
-  background: #333333;
-  color: #fff !important; }
-
-.input-detail:hover, .input-favorite:hover {
+.input-detail:hover {
   color: #b5b5b5 !important; }
 
 .icon-product {
@@ -266,7 +270,7 @@ button.close,
   padding: 1em;
   margin: 0 auto; }
 
-.input-register, .btn-fb, .btn-g {
+.input-register, .input-favorite, .input-checkout, .btn-fb, .btn-g {
   -webkit-box-sizing: content-box;
   box-shadow: none;
   box-sizing: content-box;
@@ -279,7 +283,11 @@ button.close,
   border: none;
   background: #F6F6F6; }
 
-.input-register::placeholder, .btn-fb::placeholder, .btn-g::placeholder {
+.input-favorite, .input-checkout {
+  background: #333333;
+  color: #fff !important; }
+
+.input-register::placeholder, .input-favorite::placeholder, .input-checkout::placeholder, .btn-fb::placeholder, .btn-g::placeholder {
   color: #333;
   font-size: 14px;
   line-height: 12px;
@@ -308,15 +316,21 @@ button.close,
   padding: 0; }
 
 /*****************login***************/
-.tooltip-login {
+.tooltip-login, .tooltip-car {
   z-index: 60;
-  position: absolute;
+  display: none;
   padding: 1.2em 0;
   width: 24vw;
   top: 3em;
+  position: fixed;
   border: 1px solid #F4F4F4;
   right: 8em;
   background: #fff; }
+
+.tooltip-car {
+  top: 6em;
+  right: 6em;
+  width: 22vw; }
 
 button.close {
   padding: 0 16px; }
@@ -326,5 +340,57 @@ button.close {
   height: 5px;
   width: 70%;
   z-index: -1; }
+
+/********************tooltip-car********************/
+.item-purchase {
+  border-top: 0.5px solid #F4F4F4;
+  border-bottom: 0.5px solid #F4F4F4;
+  padding: 0 2.5em; }
+
+.text-purchase {
+  font-size: 12px; }
+
+/******************shopping********************/
+.shopping {
+  position: relative;
+  top: 9em; }
+
+.title-shopping {
+  margin: 0 auto 1em auto;
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+  padding: 0 1em; }
+
+h2:before {
+  background-color: #fffe94;
+  content: "";
+  height: 5px;
+  left: 0;
+  bottom: 14px;
+  position: absolute;
+  width: 100%;
+  z-index: -1; }
+
+.guide {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center; }
+
+.input-checkout {
+  width: 20%; }
+
+span.step:after {
+  content: "|";
+  margin-left: 15px;
+  font-weight: bold;
+  display: inline-block;
+  margin-right: 15px; }
+
+.text-shopping {
+  width: 60%;
+  font-size: 13px; }
 
 /*# sourceMappingURL=style.css.map */

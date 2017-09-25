@@ -95,9 +95,9 @@ $basic-color: #fff;
 }
 
 .input-detail:focus,
-button.close,
 .input-register:focus,
-.input-search:focus {
+.input-search:focus,
+button.close {
     outline: 0;
 }
 
@@ -119,6 +119,9 @@ button.close,
 
 .pad-x3 {
     padding: 1.5em 0;
+}
+.pad-x4 {
+    padding: 0.2em 0;
 }
 
 .pad-x1 {
@@ -194,6 +197,9 @@ button.close,
 .bdr-top {
     border-top: 0.2em #F4F4F4 solid;
 }
+.bdr-bottom {
+    border-bottom: 0.4em #F4F4F4 solid;
+}
 .bdr-dotted {
     border-top: 0.3em #F4F4F4 dotted;
 }
@@ -238,11 +244,7 @@ button.close,
     align-items: center;
 }
 
-.input-favorite {
-    @extend .input-detail;
-    background: $brand-color;
-    color: $basic-color !important;
-}
+
 
 .input-detail:hover {
     color: #b5b5b5 !important;
@@ -339,7 +341,11 @@ button.close,
     border: none;
     background: #F6F6F6;
 }
-
+.input-favorite {
+    @extend .input-register;
+    background: $brand-color;
+    color: $basic-color !important;
+}
 .input-register::placeholder {
     color: #333;
     font-size: 14px;
@@ -379,20 +385,86 @@ button.close,
 /*****************login***************/
 .tooltip-login {
     z-index: 60;
-    position: absolute;
+    display: none;
+  //  position: absolute;
     padding: 1.2em 0;
     width: 24vw;
     top: 3em;
+    position: fixed;
     border: 1px solid #F4F4F4;
     right: 8em;
     background: #fff;
 }
+
+.tooltip-car {
+    @extend .tooltip-login;
+    top: 6em;
+    right: 6em;
+    width: 22vw;
+}
+
 button.close {
     padding: 0 16px;
 }
-.cross-out{
-  background-color: #fffe94;
-  height: 5px;
-  width: 70%;
-  z-index: -1;
+
+.cross-out {
+    background-color: #fffe94;
+    height: 5px;
+    width: 70%;
+    z-index: -1;
+}
+
+/********************tooltip-car********************/
+.item-purchase{
+border-top:  0.5px solid #F4F4F4;
+border-bottom:   0.5px solid #F4F4F4;
+padding: 0 2.5em;
+}
+.text-purchase{
+  font-size: 12px;
+}
+/******************shopping********************/
+.shopping {
+    position: relative;
+    top: 9em;
+}
+.title-shopping{
+margin: 0 auto 1em auto;
+position: relative;
+display: inline-block;
+text-decoration: none;
+cursor: pointer;
+padding: 0 1em;
+}
+h2:before {
+    background-color: #fffe94;
+    content: "";
+    height: 5px;
+    left: 0;
+    bottom: 14px;
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+}
+.guide{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+.input-checkout{
+  @extend .input-favorite;
+  width: 20%;
+}
+span.step:after {
+    content: "|";
+    margin-left: 15px;
+    font-weight: bold;
+    display: inline-block;
+    margin-right: 15px;
+}
+
+.text-shopping{
+width: 60%;
+font-size: 13px;
 }

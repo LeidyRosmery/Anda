@@ -1,5 +1,18 @@
-/********************modal*****************/
+/********************login*****************/
+$('#login').click(function(){
+  $('.tooltip-login').toggle();
+});
+$('#close-login').click(function(){
+  $('.tooltip-login').toggle();
+});
 
+$('#icon-shopping').click(function(){
+  $('.tooltip-car').toggle();
+});
+$('#close-login').click(function(){
+  $('.tooltip-login').toggle();
+});
+/**********************shopping car*******************/
 /**********************scroll***********************/
 var lastScrollTop = 0;
 window.addEventListener("scroll", function() {
