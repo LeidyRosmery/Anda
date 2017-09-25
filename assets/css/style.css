@@ -376,7 +376,7 @@ h2:before {
   width: 100%;
   z-index: -1; }
 
-.item-checkout:before {
+.title-login::before, .item-checkout:before {
   background-color: #fffe94;
   content: "";
   height: 5px;
@@ -417,5 +417,14 @@ span.step:after {
   font-weight: bold;
   font-size: 1.1em;
   align-items: center; }
+
+.option {
+  position: relative;
+  top: 8em; }
+
+p.title-login {
+  position: relative;
+  width: 60%;
+  font-weight: 500; }
 
 /*# sourceMappingURL=style.css.map */

@@ -24,7 +24,7 @@ window.addEventListener("scroll", function() {
         $('.hide').css('display', 'none');
         $('.main-brand').css('top', '7.5em');
         $('.grid-product').css('top', '13.5em');
-        $('.item-product').css('padding', '0em 0.2em');
+      //  $('.item-product').css('padding', '0em 0.2em');
         $('.main-header').addClass('translate');
         $('.logo').css('font-size', '2.2em');
 
@@ -34,7 +34,7 @@ window.addEventListener("scroll", function() {
             $('.grid-product').css('top', '24.2em');
             $('.title-main').css('padding-left', '0em');
             $('.hide').css('display', 'inline-block');
-            $('.item-product').css('padding', '0 1em');
+          //  $('.item-product').css('padding', '0 1em');
             $('.main-header').removeClass('translate');
             $('.logo').css('font-size', '5em');
             $('.main-brand').css('flex-direction', 'column');
