@@ -78,6 +78,7 @@
   text-align: center; }
 
 .input-detail:focus, .input-favorite:focus,
+button.close,
 .input-register:focus,
 .btn-fb:focus,
 .btn-g:focus,
@@ -158,6 +159,9 @@
 
 .bdr-top {
   border-top: 0.2em #F4F4F4 solid; }
+
+.bdr-dotted {
+  border-top: 0.3em #F4F4F4 dotted; }
 
 .modal-content {
   padding: 1em 1.5em; }
@@ -307,10 +311,20 @@
 .tooltip-login {
   z-index: 60;
   position: absolute;
-  height: 89vh;
-  width: 31vw;
+  padding: 1.2em 0;
+  width: 24vw;
   top: 3em;
+  border: 1px solid #F4F4F4;
   right: 8em;
-  background: red; }
+  background: #fff; }
+
+button.close {
+  padding: 0 16px; }
+
+.cross-out {
+  background-color: #fffe94;
+  height: 5px;
+  width: 70%;
+  z-index: -1; }
 
 /*# sourceMappingURL=style.css.map */

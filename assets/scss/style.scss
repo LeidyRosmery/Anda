@@ -95,6 +95,7 @@ $basic-color: #fff;
 }
 
 .input-detail:focus,
+button.close,
 .input-register:focus,
 .input-search:focus {
     outline: 0;
@@ -192,6 +193,9 @@ $basic-color: #fff;
 
 .bdr-top {
     border-top: 0.2em #F4F4F4 solid;
+}
+.bdr-dotted {
+    border-top: 0.3em #F4F4F4 dotted;
 }
 
 .modal-content {
@@ -372,14 +376,23 @@ $basic-color: #fff;
 .pd-0 {
     padding: 0;
 }
-
 /*****************login***************/
-.tooltip-login{
-  z-index: 60;
-  position: absolute;
-  height: 89vh;
-  width: 31vw;
-  top: 3em;
-  right: 8em;
-  background: red;
+.tooltip-login {
+    z-index: 60;
+    position: absolute;
+    padding: 1.2em 0;
+    width: 24vw;
+    top: 3em;
+    border: 1px solid #F4F4F4;
+    right: 8em;
+    background: #fff;
+}
+button.close {
+    padding: 0 16px;
+}
+.cross-out{
+  background-color: #fffe94;
+  height: 5px;
+  width: 70%;
+  z-index: -1;
 }
