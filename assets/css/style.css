@@ -430,7 +430,7 @@ p.title-login {
 .brands {
   background: #F3F3F3;
   position: relative;
-  top: 10em;
+  top: -0.3em;
   display: flex;
   align-items: center;
   padding: 1em; }
@@ -438,14 +438,23 @@ p.title-login {
 .icon-brand {
   padding: 0 0.2em; }
 
+.politics {
+  background: #333;
+  height: 5em;
+  display: flex;
+  color: #fff;
+  align-items: center;
+  flex-direction: column;
+  padding: 1em; }
+
 .pie-pag {
-  background: #333333;
+  background: #fff;
   position: relative;
-  top: 12.5em;
+  top: 13.5em;
   display: flex;
   font-size: .8em;
-  color: #fff;
-  padding: 2em 0;
+  /* color: #fff; */
+  /* padding: 2em 0; */
   flex-direction: column;
   justify-content: center; }
 
