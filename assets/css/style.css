@@ -427,4 +427,26 @@ p.title-login {
   width: 60%;
   font-weight: 500; }
 
+.brands {
+  background: #F3F3F3;
+  position: relative;
+  top: 10em;
+  display: flex;
+  align-items: center;
+  padding: 1em; }
+
+.icon-brand {
+  padding: 0 0.2em; }
+
+.pie-pag {
+  background: #333333;
+  position: relative;
+  top: 12.5em;
+  display: flex;
+  font-size: .8em;
+  color: #fff;
+  padding: 2em 0;
+  flex-direction: column;
+  justify-content: center; }
+
 /*# sourceMappingURL=style.css.map */
