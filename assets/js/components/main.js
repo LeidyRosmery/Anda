@@ -42,6 +42,7 @@ $(document).ready(function() {
         imagen:$(this).prev().data('imagen')
       };
         carShopping.push(obj);
+        localStorage.setItem('carrito', JSON.stringify(carShopping));
         localStorage.setItem("contador-bag", carShopping.length);
     //   console.log(localStorage.getItem("contador-bag"));
         $('.count-bag').text(carShopping.length);
@@ -63,8 +64,5 @@ $(document).ready(function() {
           console.log(elemento);
             $('.cont-purchase').append('<div class="col-sm-12 item-purchase pad-x2"><div class="row pad-x3 "><div class="col-sm-4"><img class="product img-responsive" style="height:9vh" src="' + elemento.imagen + '" alt=""></div><div class="col-sm-8 text-center"><p class="text-center text-purchase mrg-0"><strong>'+elemento.nombre+'</strong></p><p class="text-center text-purchase mrg-0">(CANT) '+elemento.cantidad+'</p><p class="text-center text-purchase mrg-0">SOLES ' + elemento.precio + '</p></div></div></div>');
         });
-
     });
-
 });
-  $('.count-bagReg').text(localStorage.getItem("contador-bag"));

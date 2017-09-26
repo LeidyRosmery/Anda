@@ -471,6 +471,11 @@ p.title-login {
   text-align: center;
   font-weight: 700; }
 
+.center-flex {
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
 .count-bagReg {
   display: inline-block; }
 

@@ -561,6 +561,11 @@ p.title-login {
      font-weight: 700;
 
 }
+.center-flex{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .count-bagReg{
   @extend .count-bag;
   display: inline-block;
