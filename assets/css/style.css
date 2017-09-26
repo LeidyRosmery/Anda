@@ -141,7 +141,8 @@ button.close {
   color: #fff !important; }
 
 .product {
-  width: 100%; }
+  width: 90%;
+  height: 40vh; }
 
 .translate {
   display: flex;
