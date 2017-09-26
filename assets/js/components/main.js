@@ -28,7 +28,9 @@ $(document).ready(function() {
             $('.cont-brands').append('<li class="item-brand highlight">' + e.name + '</li>');
             if (e.producto != undefined) {
                 e.producto.forEach(function(elemento) {
-                    $('.row-grid').append(' <div class="col-sm-4" style="padding:1.5em"><div class="text-center"><img class="product img-responsive" src="'+elemento.img+'" alt=""><i class="trigger-modal icon-product fa fa-eye" data-nombre="'+e.name+'" data-cantidad="'+elemento.cantidad+'" data-precio="'+elemento.precio+'" data-stock="'+elemento.stock+'" data-imagen="'+elemento.img+'" data-toggle="modal" data-target="#exampleModal" aria-hidden="true"></i><i class="icon-product fa fa-shopping-basket" aria-hidden="true"></i> <div class="bdr-top detail-product"><h3 class="title-product">'+e.name+'</h3><p class="stock">'+elemento.stock+'</p><p class="title-product">SOLES '+elemento.precio+'</p><p class="quantity">'+elemento.cantidad+'</p></div></div></div>');
+                    $('.row-grid').append(' <div class="col-sm-4" style="padding:1.5em"><div class="text-center"><img class="product img-responsive" src="'+elemento.img+'" alt=""><i class="trigger-modal icon-product fa fa-eye" data-nombre="'+e.name+'" data-cantidad="'+elemento.cantidad+'" data-precio="'+elemento.precio+'" data-stock="'+elemento.stock+'" data-imagen="'+elemento.img+'" data-toggle="modal" data-target="#exampleModal" aria-hidden="true"></i><i class="icon-product fa fa-shopping-basket add-car"   aria-hidden="true"></i> <div class="bdr-top detail-product"><h3 class="title-product">'+e.name+'</h3><p class="stock">'+elemento.stock+'</p><p class="title-product">SOLES '+elemento.precio+'</p><p class="quantity">'+elemento.cantidad+'</p></div></div></div>');
+$('.add-car').data("bar",elemento);
+
                 });
             }
         });
@@ -36,7 +38,7 @@ $(document).ready(function() {
     });
 
     $('.row-grid').on('click', ".add-car", function() {
-        carShopping.push($(this).data('compra'));
+        carShopping.push($(this).data('bar'));
         console.log(carShopping);
     });
 

@@ -13,7 +13,7 @@ const cocaCola = [{
         cantidad: '2L'
     },
     {
-        id: '3',
+       id: '3',
         img: 'https://sc02.alicdn.com/kf/HTB171TvKFXXXXbbXVXXq6xXFXXXv/BOTTLE-2L.jpg',
         stock: '120 unid.',
         precio: '2',
