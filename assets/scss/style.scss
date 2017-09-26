@@ -547,3 +547,21 @@ p.title-login {
       flex-direction: column;
       justify-content: center;
 }
+
+.count-bag{
+  position: relative;
+     background: #fffe94;
+     border-radius: 93em;
+     padding: 3px 9px;
+     display: none;
+     font-size: .6em;
+     bottom: 1em;
+     right: 0.3em;
+     text-align: center;
+     font-weight: 700;
+
+}
+.count-bagReg{
+  @extend .count-bag;
+  display: inline-block;
+}
