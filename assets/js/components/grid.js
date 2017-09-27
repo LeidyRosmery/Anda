@@ -37,8 +37,14 @@ function calculaMonto(){
       });
   });
 }
+  calculaMonto();
 
+$("#precioEnvio").change(function(){
+  if ($(this).) {if($("#radio").is(':checked')) 
 
+  }
+  $(this).prop('checked', false);
+});
 
 $('.grid-car').on('click', '.eliminar', function() {
     array.splice($(this).data('delete'), 1);
