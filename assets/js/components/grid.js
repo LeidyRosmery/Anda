@@ -19,32 +19,32 @@ $('#pago').text('SOLES '+precioPago +'.00');
 
 render();
 
-$("select[name=cantidad]").change(function() {
-    var valor=$(this).data('id');
-    array[valor].precioTotal=50;
-  //localStorage.setItem("contador-bag", array);
-        precioItem = ($(this).val()) * ($(this).data('precio'));
+function calculaMonto(){
+  $("select[name=cantidad]").change(function() {
+      var valor=$(this).data('id');
+      array[valor].precioTotal=50;
+    //localStorage.setItem("contador-bag", array);
+          precioItem = ($(this).val()) * ($(this).data('precio'));
 
-    $('.precioUnt').each(function() {
-        if($(this).data('id')==valor){
-          $(this).empty();
-          $(this).text(precioItem);
-        };
-    });
+      $('.precioUnt').each(function() {
+          if($(this).data('id')==valor){
+            $(this).empty();
+            $(this).text(precioItem);
+          };
+      });
+      array.forEach(function(elemento){
+        subPrecio=subPrecio+elemento.precioTotal;
+      });
+  });
+}
 
-  //  var array1 = localStorage.getItem('carrito');
-  //  array1 = JSON.parse(array1);
-    array.forEach(function(elemento){
-      subPrecio=subPrecio+elemento.precioTotal;
-    });
-    //$('#totalxProductos').text(subPrecio);
-});
 
 
 $('.grid-car').on('click', '.eliminar', function() {
     array.splice($(this).data('delete'), 1);
     $('.grid-car').empty();
     render();
+    calculaMonto();
     localStorage.setItem("contador-bag", array.length);
     if(array.length==0){
       $('.count-bagReg').css('display','none');
